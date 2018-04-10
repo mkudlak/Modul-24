@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash');
+body {
+    background-color: rgb(69, 72, 112);
+    text-align: center;
+    color: rgb(235, 235, 158);
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 30px;
+}
+#root {
+    margin: 50px 0;
+}
+input {
+    margin: 10px;
+}
+ul {
+    padding: 0;
+    width: auto;
+}
+li {
+    list-style-type: none;
+    margin: 100px;
+}
+span {
+    margin: 20px;
+    border: 1px solid black;
+    padding: 30px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    background-color:rgb(41, 43, 68)
+}
+.Player__score:hover,
+.Player__button:hover,
+.Player__button:hover {
+    background-color: rgb(122, 126, 173);
+    cursor: pointer;
+}
