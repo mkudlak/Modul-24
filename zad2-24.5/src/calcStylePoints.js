@@ -1,20 +1,15 @@
-const calcStylePoints = (styleNotes) => {
-  let styleNotesArray = styleNotes.toString().split(',');
-
-  function findAndRemoveMinMax(styleNotesArray) {
-    let min = Math.min(styleNotesArray);
-    let max = Math.max(styleNotesArray);
-
-    styleNotesArray = styleNotesArray.filter(min);
-    styleNotesArray = styleNotesArray.filter(max);
-
-    return styleNotesArray
-  }
-
-  function addPoints(styleNotesArray) {
-    styleNotesArray = styleNotesArray.reduce((a, b) => a + b, 0);
-    return styleNotesArray;
-  }
+function calcStylePoints() {
+    let result = 0;
+    let min = Math.min(...arguments);
+    console.log('min to ' + min)
+    let max = Math.max(...arguments);
+    console.log('max to ' + max);
+    for (let i = 0; i < arguments.length; i++) {
+      result += arguments[i];
+    }
+    return result - (min + max);
 };
+
+
 
 module.exports = calcStylePoints;
