@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./src/calcDistancePoints.test.js"
+    "test": "mocha ./src/calcStylePoints.test.js"
   },
   "keywords": [],
   "author": "",

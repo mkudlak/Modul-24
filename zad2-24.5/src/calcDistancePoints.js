@@ -1,17 +1,11 @@
 const calcDistancePoints = (distance, hillSize, kPoint) => {
-    let distancePoints;
     let hillType;
     let differencePoints;
     let kPointBase;
     let calculatePoints;
-    
-    if(distance%2 > 0.5) {
-        distancePoints = Math.floor(distance) + 0.5;
-        return distancePoints;
-	} else {
-        distancePoints = Math.floor(distance) + 1;
-        return distancePoints;
-	}
+
+    //Difference between distance and kPoint
+    differencePoints = distance - kPoint
 
     //Typing hillType
     if (hillSize >= 85 && hillSize < 110) {
@@ -22,17 +16,12 @@ const calcDistancePoints = (distance, hillSize, kPoint) => {
         hillType = 'mamut';
     }
 
-    //kPoint
+    //kPoint to calculate the base points for every jump
     if (kPoint >= 185) {
         kPointBase = 120;
-        return kPointBase;
     } else {
         kPointBase = 60;
-        return kPointBase;
     }
-
-    //Amount of distancePoints and kPointBase
-    differencePoints = distancePoints - kPoint
 
     //Calculation points depending on the hillType
     switch (hillType) {
@@ -47,7 +36,8 @@ const calcDistancePoints = (distance, hillSize, kPoint) => {
             break;
     }
 
-    calculatePoints = differencePoints + kPointBase;
+    //Amount points depenfing on the hillType with the base for the jump
+    calculatePoints = calculatePoints + kPointBase;
 
     return calculatePoints;
 };
