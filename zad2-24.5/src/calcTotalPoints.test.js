@@ -10,7 +10,7 @@ describe('calcTotalPoints', () => {
         assert.equal(actual, expected);
     });
     it('should return 131.8 on normal hillSize', () => {
-        const actual = calcTotalPoints(111, 109, 98, [19, 19.5, 19, 19, 19], 3.2, -14.4);
+        const actual = calcTotalPoints(111, 109, 98, 57, 3.2, -14.4);
 
         const expected = 131.8;
 

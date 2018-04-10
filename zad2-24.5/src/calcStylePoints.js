@@ -1,4 +1,4 @@
-function calcStylePoints() {
+function calcStylePoints(styleNotes) {
     let result = 0;
     let min = Math.min(...arguments);
     console.log('min to ' + min)
@@ -9,7 +9,5 @@ function calcStylePoints() {
     }
     return result - (min + max);
 };
-
-
 
 module.exports = calcStylePoints;
