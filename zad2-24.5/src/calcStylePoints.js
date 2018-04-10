@@ -1,17 +1,19 @@
 const calcStylePoints = (styleNotes) => {
-    let min = Math.min(styleNotes);
-    let max = Math.max(styleNotes);
+  let styleNotesArray = styleNotes.toString().split(',');
 
+  function findAndRemoveMinMax(styleNotesArray) {
+    let min = Math.min(styleNotesArray);
+    let max = Math.max(styleNotesArray);
 
-  // function removeMinAndMax(styleNotes) {
-  //   styleNotes = styleNotes.filter(min);
-  //   styleNotes = styleNotes.filter(max);
-  //   return styleNotes;
-  // }
+    styleNotesArray = styleNotesArray.filter(min);
+    styleNotesArray = styleNotesArray.filter(max);
 
-  function addPoints(styleNotes) {
-    styleNotes = styleNotes.reduce((a, b) => a+b, 0);
-    return styleNotes;
+    return styleNotesArray
+  }
+
+  function addPoints(styleNotesArray) {
+    styleNotesArray = styleNotesArray.reduce((a, b) => a + b, 0);
+    return styleNotesArray;
   }
 };
 
