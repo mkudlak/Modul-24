@@ -1,13 +1,11 @@
 function calcStylePoints(styleNotes) {
     let result = 0;
-    let min = Math.min(...arguments);
+    let min = Math.min(...styleNotes);
     console.log('min to ' + min)
-    let max = Math.max(...arguments);
+    let max = Math.max(...styleNotes);
     console.log('max to ' + max);
-    for (let i = 0; i < arguments.length; i++) {
-      result += arguments[i];
-    }
-    return result - (min + max);
+
+    return styleNotes.reduce((a, b) => a + b) - (max + min);
 };
 
 module.exports = calcStylePoints;
