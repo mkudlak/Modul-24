@@ -17,7 +17,7 @@ it('should update player score', () => {
   ];
   const playerScoreExpected = 10;
 
-  const appComponent = shallow(<App />); //to tu ma byc?
+  const appComponent = shallow(<App />);
   appComponent.setState({ players });
   const onScoreUpdate = appComponent.find(PlayersList).prop('onScoreUpdate');
   onScoreUpdate(0, 5);

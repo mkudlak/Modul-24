@@ -20,8 +20,8 @@ class App extends Component {
       return player;
     })
   })
-}
-onPlayerAdd = (playerName) => {
+ }
+ onPlayerAdd = (playerName) => {
   const newPlayer = {
     name: playerName,
     score: 0,
@@ -29,16 +29,21 @@ onPlayerAdd = (playerName) => {
   this.setState({
     players: [...this.state.players, newPlayer]
   })
-}
-// onPlayerRemove = /////dodac 
-// }
+ }
+ onPlayerRemove = (i) => {
+  this.setState({
+    players: this.state.players.filter((player, index) => {
+      return index !== i
+    })
+  })
+ }
  render() {
-   return (
-     <div className="App">
+  return (
+    <div className="App">
       <AddPlayer onPlayerAdd={this.onPlayerAdd} />
-      <PlayersList players={this.state.players} onScoreUpdate={this.onScoreUpdate} onPlayerDelete={this.onPlayerRemove}/>
-     </div>
-   );
+      <PlayersList players={this.state.players} onScoreUpdate={this.onScoreUpdate} onPlayerRemove={this.onPlayerRemove}/>
+    </div>
+  );
  }
 }
 
